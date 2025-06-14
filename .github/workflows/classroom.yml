@@ -1,0 +1,32 @@
+name: Autograding Tests
+on: push
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: HTML Structure Check A
+        run: grep -q '<title>' index.html
+      - name: HTML Element Check B
+        run: grep -q 'src="images/dex.png"' index.html
+      - name: HTML Attribute Check C
+        run: grep -q 'alt=' index.html
+      - name: HTML Tag Validation D
+        run: grep -q '</p>' index.html
+      - name: HTML Syntax Check E
+        run: grep -q '</h2>' index.html
+      - name: HTML Format Check F
+        run: grep -q '</h3>' index.html
+      - name: HTML Element Check G
+        run: grep -q '<p>' index.html
+      - name: HTML Validation Check H
+        run: '! grep -q "<para>" index.html'
+      - name: HTML Link Check I
+        run: grep -q 'href="https://www.nasa.gov/"' index.html
+      - name: HTML Structure Check J
+        run: sed -n '/<body>/,/<\/body>/p' index.html | grep -q '<h1>'
