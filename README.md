@@ -13,7 +13,7 @@
     <p>
         Hi everyone, my name is Dex and I am a Duckasaurus. That means I'm part dinosaur, part programmer, and part rubber duck!
     </p>
-    <img src="Dex.png" alt="Duckasaurus" width="500"height="auto">
+    <img src="Dex.png" alt="Duckasaurus" width="500 "height="auto">
 <h2>
     My Favourite Things
 </h2>
